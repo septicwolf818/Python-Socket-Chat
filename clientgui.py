@@ -70,7 +70,7 @@ def send_message(_):
     msg = f'{len(msg.encode("utf-8")):<10}' + msg
     s.send(bytes(msg.encode("utf-8")))
     if msg_cp == "exit":
-        exit(0)
+        root.quit()
 
 
 HEADER_SIZE = 10
