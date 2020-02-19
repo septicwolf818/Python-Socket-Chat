@@ -50,12 +50,14 @@ def connect(host, port):
         connection_host = host
         connection_port = port
         nick = nick_entry.get()
+        if nick == "":
+            nick = "Guest"
         start_chat()
 
     except Exception as e:
         print(str(e))
         messagebox.showerror("Connection error", str(e))
-        exit(0)
+        root.quit()
 
 
 def send_message(_):

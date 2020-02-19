@@ -26,6 +26,8 @@ except Exception as e:
     print(str(e))
     exit(0)
 nick = input("\rEnter your name: ")
+if nick == "":
+    nick = "Guest"
 print("Type 'exit' to close connection")
 threading.Thread(target=handle_messages, args=(s,), daemon=True).start()
 while True:
